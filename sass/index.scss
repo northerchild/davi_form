@@ -1,0 +1,272 @@
+:root {
+    /*Colors*/
+    --Grey: #212226;
+    --White_Smoke: #f4f4f4;
+    --White: #fff;
+    --Black: #000;
+    --Grey2: #f4f4f4;
+    --Red: #ed1b24;
+    /*Borders*/
+    --border_white: 1px solid #fff;
+    --border_yellow: 1px solid #f4c613;
+    /*Tiempo*/
+    --t: all 0.5s ease-in;
+    /*Bordes*/
+    --Border_w: 2px solid #fff;
+    --border_w: 1px solid #fff;
+}
+
+//Icons
+.fa-bars,
+.fa-arrow-circle-left {
+    color: var(--Red);
+    font-size: 2rem;
+    ;
+}
+
+.posicion_texto {
+    margin-top: -40px;
+    margin-left: 40px;
+}
+
+//End Incons
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-size: 1.2rem;
+    height: 75px;
+    background: var(--Red);
+    padding: 0 20px;
+    color: var(--White);
+}
+
+.mostrar {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 100px !important;
+}
+
+.right {
+    float: right;
+    margin-top: -50px;
+    margin-right: 45px;
+}
+
+.fa-user-o {
+    color: var(--White);
+    font-size: 30px;
+}
+
+.logo {
+    position: absolute;
+    left: 90px;
+    img {
+        width: 122px;
+        height: 60px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0 10px;
+        transition: .4s;
+    }
+}
+
+.name_text {
+    text-transform: uppercase;
+    color: #737373;
+    font-weight: 700;
+}
+
+.profile {
+    float: left;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+    transition: .4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+    i {
+        line-height: 50px;
+    }
+}
+
+.menu a:hover {
+    text-decoration: none;
+    padding: 17px;
+    background: #fff;
+    color: #000;
+}
+
+.bg_grey {
+    background-color: var(--Grey2);
+    height: 120px;
+}
+
+.show-menu-btn:hover {
+    transform: rotate(90deg);
+}
+
+.hide-menu-btn:hover {
+    font-size: 2rem;
+}
+
+#check_box {
+    position: absolute;
+    right: 50px;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+
+/*Footer*/
+
+.footer-container {
+    left: 0px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+footer {
+    background: #212226;
+    padding: 30px;
+    p {
+        color: var(--White);
+        line-height: 20px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        span {
+            color: var(--Main_green);
+            margin-left: 1rem;
+        }
+    }
+}
+
+.suscribe {
+    color: var(--Main_green);
+    margin-right: 1rem;
+}
+
+.button-suscribe {
+    line-height: 2.3rem;
+    background-color: #252525;
+    text-indent: 1rem;
+    border: 2px solid #252525;
+    margin-right: .5rem;
+    color: var(--White);
+}
+
+.submit-suscribe {
+    color: var(--White);
+    border: var(--Border_w);
+    text-decoration: none;
+    background: transparent;
+    padding: 0.5em 1.5em;
+    transition: var(--t);
+}
+
+
+/*End Footer*/
+
+@media screen and (max-width: 1000px) {
+    .show-menu-btn,
+    .hide-menu-btn {
+        display: block;
+        line-height: 50px;
+    }
+    .logo {
+        left: 10px;
+    }
+    .menu {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: .8s;
+        a {
+            display: block;
+            padding: 20px;
+        }
+    }
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check_box:checked~.menu {
+        right: 0;
+        z-index: 2;
+    }
+    .fa-user-o {
+        display: none !important;
+    }
+}
+
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        width: 100%;
+    }
+    .show-menu-btn,
+    .hide-menu-btn {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        top: 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px 0;
+        line-height: normal;
+        transition: .8s;
+        a {
+            display: block;
+            padding: 20px;
+        }
+    }
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check_box:checked~.menu {
+        right: 0;
+    }
+}
